@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">projeto_2</string>
+
+    <string-array name="lista_moedas">
+        <item>Real</item>
+        <item>Dolar</item>
+    </string-array>
+</resources>

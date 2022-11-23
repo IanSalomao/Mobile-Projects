@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/shape_gradient"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="lança">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Conversor de Bitcoin"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:translationY="-80dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_radios"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        >
+        <EditText
+            android:id="@+id/valor_converter"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Valor"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+        </EditText>
+
+        <Spinner
+        android:id="@+id/spinner_moedas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_radios"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        >
+        <EditText
+            android:id="@+id/cotacao_dolar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Cotação Dolar"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/cotacao_real"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Cotação Real"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caucular" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_radios"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:text="Resultado"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver cotações" />
+
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/web_view" />
+
+
+</LinearLayout>
